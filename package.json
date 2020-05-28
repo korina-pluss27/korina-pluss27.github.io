@@ -23,7 +23,6 @@
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "animejs": "^3.2.0",
     "babel-preset-gatsby": "^0.4.7",
     "emotion-theming": "^10.0.27",
     "eslint": "^7.1.0",
@@ -36,7 +35,8 @@
     "gatsby-plugin-emotion": "^4.3.2",
     "gatsby-plugin-eslint": "^2.0.8",
     "normalize.css": "^8.0.1",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "react-spring": "^8.0.27"
   },
   "scripts": {
     "build": "gatsby build",

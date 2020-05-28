@@ -4,7 +4,7 @@ import { ThemeProvider } from 'emotion-theming';
 import 'normalize.css';
 
 import Flexy from '../components/flexy';
-import Image from '../components/image';
+import Zuko from '../components/zuko';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import theme from '../styles/theme';
@@ -42,7 +42,7 @@ const IndexPage = () => {
             }}
           >
             <div style={{ marginTop: '24px', width: '350px' }}>
-              <Image />
+              <Zuko />
             </div>
           </Flexy>
         </Flexy>
