@@ -29,20 +29,15 @@ const Layout = ({ children }) => {
       <Global
         styles={css`
           html {
-            background: ${theme.colors.black};
+            background: ${theme.colors.white};
             font-family: Helvetica Neue;
-            color: white;
+            color: black;
           }
         `}
       />
       {children}
       <footer>
-        <Text>
-          {' '}
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Text>
+        <Text> © {new Date().getFullYear()}, Built with Gatsby</Text>
       </footer>
     </div>
   );

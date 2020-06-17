@@ -1,59 +1,72 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
-import { useTheme } from 'emotion-theming';
 
+import mq from '../styles/media-queries';
 import Flexy from '../components/flexy';
 
 const headerLink = css`
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+  color: black;
+  font-size: 12px;
   font-weight: 400;
+  letter-spacing: 1.75px;
+  margin: 0 20px;
+  text-decoration: none;
   text-transform: uppercase;
-  margin-right: 12px;
+  &:last-child {
+    margin-right: 0px;
+  }
 `;
 
 const Header = ({ siteTitle }) => {
-  const theme = useTheme();
-
   return (
     <header
       css={{
-        borderBottom: `1px solid`,
-        borderColor: theme.colors.backgroundSecondary,
-        padding: '24px 12px 12px 12px',
+        height: '80px',
+        width: '100%',
+        top: '0px',
+        zIndex: '10',
       }}
     >
-      <Flexy
-        css={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'flex-end',
-        }}
+      <div
+        css={mq({
+          margin: '2px auto',
+          width: ['360px', '420px', '768px', '990px', '1120px'],
+          minWidth: ['360px', '420px', '768px', '990px', '1120px'],
+        })}
       >
-        <h1
+        <Flexy
           css={{
-            textTransform: 'uppercase',
-            fontWeight: '200',
-            color: 'white',
-            margin: 0,
+            height: '80px',
+            justifyContent: 'space-between',
+            alignItems: 'center',
           }}
         >
-          {siteTitle}
-        </h1>
-        <Flexy css={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-          <Link to="/" css={headerLink}>
-            home
-          </Link>
-          <Link to="/projects" css={headerLink}>
-            projects
-          </Link>
-          <Link to="/about" css={headerLink}>
-            about
-          </Link>
+          <Flexy>
+            <a
+              css={{
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                letterSpacing: '1.5px',
+                fontWeight: '700',
+              }}
+            >
+              {siteTitle}
+            </a>
+          </Flexy>
+          <Flexy>
+            <Link to="/" css={headerLink}>
+              home
+            </Link>
+            <Link to="/projects" css={headerLink}>
+              projects
+            </Link>
+            <Link to="/about" css={headerLink}>
+              about
+            </Link>
+          </Flexy>
         </Flexy>
-      </Flexy>
+      </div>
     </header>
   );
 };
