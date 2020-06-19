@@ -15,14 +15,14 @@ const Banner = () => {
           }
         }
       }
-      acnh: file(relativePath: { eq: "acnh.jpg" }) {
+      sunflowers: file(relativePath: { eq: "sunflower.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      tom: file(relativePath: { eq: "tom.jpg" }) {
+      strawberries: file(relativePath: { eq: "strawberries.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -52,13 +52,14 @@ const Banner = () => {
         <div css={{ position: 'relative' }}>
           <div
             css={{
-              width: '260px',
+              width: '200px',
+              height: '100px',
               position: 'absolute',
-              left: '100px',
+              left: '30px',
               top: '20px',
             }}
           >
-            <Img fluid={data.tom.childImageSharp.fluid} />
+            <Img fluid={data.sunflowers.childImageSharp.fluid} />
           </div>
           <div
             css={mq({
@@ -70,7 +71,7 @@ const Banner = () => {
               position: 'absolute',
               width: '100%',
               left: '0',
-              top: '50%',
+              top: '55%',
               transform: 'translateY(-50%)',
               textAlign: 'center',
               mixBlendMode: 'difference',
@@ -89,13 +90,13 @@ const Banner = () => {
           </div>
           <div
             css={{
-              width: '260px',
+              width: '200px',
               position: 'absolute',
-              right: '100px',
+              right: '30px',
               bottom: '20px',
             }}
           >
-            <Img fluid={data.acnh.childImageSharp.fluid} />
+            <Img fluid={data.strawberries.childImageSharp.fluid} />
           </div>
         </div>
       </div>
