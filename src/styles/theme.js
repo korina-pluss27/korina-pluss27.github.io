@@ -1,24 +1,19 @@
 export default {
-  fonts: {},
   colors: {
-    backgroundPrimary: '#5F506B',
-    backgroundSecondary: '#533747',
-    emphasis: '#86BBBD',
-    heading: '#76949F',
-    subheading: '#6A6B83',
-    black: '#24181F',
-    gray: '#403F3F',
+    utility: '#ebe8ea',
+    gray: '#444444',
+    background: {
+      dark: '#1e1e27',
+      light: '#ebe8ea',
+    },
+    primary: '#808bed',
+    secondary: '#c080d0',
+    highlight: '#ff8bff',
+    tmux: '#98fb98',
   },
+  space: [0, 4, 8, 12, 16, 24, 48, 64],
+  fontSizes: [12, 14, 18, 24, 30, 36, 48, 60],
+  fontWeights: [200, 300, 400, 500, 700],
+  lineHeights: [20, 24, 32, 40],
+  breakpoints: ['375px', '768px', '1000px'],
 };
-
-/*
-usage
-
-import { useTheme } from 'emotion-theming';
-
-const theme = useTheme()
-
-<div
-  css={{ color: theme.colors.primary }}
-/>
-*/

@@ -1,73 +1,45 @@
 import React from 'react';
-import { css } from '@emotion/core';
-import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-import mq from '../styles/media-queries';
-import Flexy from '../components/flexy';
+import Logo from '../components/logo';
+import { Flex, Box, Link } from '../components/styled';
 
-const headerLink = css`
-  color: black;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1.75px;
-  margin: 0 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-  &:last-child {
-    margin-right: 0px;
+const HeaderLink = styled(Link)`
+  color: ${(props) => props.theme.colors.utility};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 
-const Header = ({ siteTitle }) => {
+const Header = ({ show }) => {
   return (
-    <header
-      css={{
-        height: '80px',
-        width: '100%',
-        top: '0px',
-        zIndex: '10',
+    <Flex
+      position="fixed"
+      top={show ? '0px' : '-60px'}
+      height="60px"
+      justifyContent="space-between"
+      padding={5}
+      borderBottom="1px solid"
+      borderColor="tmux"
+      zIndex={1}
+      width="100%"
+      backgroundColor="background.dark"
+      style={{
+        transition: 'all .6s ease-in-out',
+        boxShadow: '1px 1px 1px #222',
       }}
     >
-      <div
-        css={mq({
-          margin: '2px auto',
-          width: ['360px', '420px', '768px', '990px', '1120px'],
-          minWidth: ['360px', '420px', '768px', '990px', '1120px'],
-        })}
-      >
-        <Flexy
-          css={{
-            height: '80px',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <Flexy>
-            <a
-              css={{
-                textTransform: 'uppercase',
-                textDecoration: 'none',
-                letterSpacing: '1.5px',
-                fontWeight: '700',
-              }}
-            >
-              {siteTitle}
-            </a>
-          </Flexy>
-          <Flexy>
-            <Link to="/" css={headerLink}>
-              home
-            </Link>
-            <Link to="/projects" css={headerLink}>
-              projects
-            </Link>
-            <Link to="/about" css={headerLink}>
-              about
-            </Link>
-          </Flexy>
-        </Flexy>
-      </div>
-    </header>
+      <Flex alignItems="center">
+        <Logo />
+      </Flex>
+      <Flex alignItems="center" width="40%" justifyContent="space-between">
+        <HeaderLink href="#about">[1] about</HeaderLink>
+        <Box marginRight={3} />
+        <HeaderLink href="#projects">[2] projects</HeaderLink>
+        <Box marginRight={3} />
+        <HeaderLink href="#contact">[3] contact</HeaderLink>
+      </Flex>
+    </Flex>
   );
 };
 
