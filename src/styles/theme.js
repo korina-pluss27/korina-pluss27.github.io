@@ -1,6 +1,7 @@
 export default {
   colors: {
     utility: '#ebe8ea',
+    lightGray: '#aaaaaa',
     gray: '#444444',
     background: {
       dark: '#1e1e27',
