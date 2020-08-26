@@ -5,6 +5,7 @@ import Logo from '../components/logo';
 import { Flex, Box, Link } from '../components/styled';
 
 const HeaderLink = styled(Link)`
+  text-decoration: none;
   color: ${(props) => props.theme.colors.utility};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
@@ -32,12 +33,19 @@ const Header = ({ show }) => {
       <Flex alignItems="center">
         <Logo />
       </Flex>
-      <Flex alignItems="center" width="40%" justifyContent="space-between">
-        <HeaderLink href="#about">[1] about</HeaderLink>
+      <Flex alignItems="center" width="60%" justifyContent="space-between">
+        <HeaderLink fontSize={[1, 1, 2]} href="#about">
+          [1] about
+        </HeaderLink>
         <Box marginRight={3} />
-        <HeaderLink href="#projects">[2] projects</HeaderLink>
+        <HeaderLink fontSize={[1, 1, 2]} href="#projects">
+          [2] projects
+        </HeaderLink>
         <Box marginRight={3} />
-        <HeaderLink href="#contact">[3] contact</HeaderLink>
+        <HeaderLink fontSize={[1, 1, 2]} href="#contact">
+          [3] contact
+        </HeaderLink>
+        <Box marginRight={3} />
       </Flex>
     </Flex>
   );
