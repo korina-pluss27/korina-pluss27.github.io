@@ -8,20 +8,10 @@ import {
   layout,
   position,
   space,
-  typography,
 } from 'styled-system';
 
-export const Link = styled.a(
-  compose(
-    background,
-    border,
-    color,
-    flexbox,
-    layout,
-    position,
-    space,
-    typography,
-  ),
+export const Image = styled.img(
+  compose(background, border, color, flexbox, layout, position, space),
 );
 
 export default {};
