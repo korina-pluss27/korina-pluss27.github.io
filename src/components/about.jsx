@@ -11,6 +11,7 @@ const About = () => {
         Northeastern University
       </Link>
       {` studying Computer Engineering and Computer Science. I love plants, anime, and making coffee!`}
+      <Box marginBottom={4} />
     </>
   );
 
