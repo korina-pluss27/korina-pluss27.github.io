@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-tsparticles';
 import { ThemeProvider } from 'styled-components';
 
-import App from './app';
+import App from '../components/app';
 import theme from '../styles/theme';
 import '../styles/index.css';
 
