@@ -6,11 +6,11 @@ import { Box, Flex, Link, Text, Image } from './styled';
 const About = () => {
   const words = (
     <>
-      {`Hi there! I'm Kori. I am a student at `}
+      {`Hi there! I'm Kori. I am a Computer Engineering and Computer Science student at `}
       <Link href="https://www.northeastern.edu/" color="highlight">
         Northeastern University
       </Link>
-      {` studying Computer Engineering and Computer Science. I love plants, anime, and making coffee!`}
+      {`. I love plants, anime, and making coffee!`}
       <Box marginBottom={4} />
     </>
   );
@@ -34,6 +34,7 @@ const About = () => {
         <Flex width="50%" justifyContent="center">
           <Image
             maxHeight="200px"
+            border="1px solid white"
             borderRadius="50%"
             src={profilePic}
             alt-text="my profile picture"

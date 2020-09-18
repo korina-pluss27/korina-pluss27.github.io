@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main id="kp-main">
       <Particles
-        style={{ position: 'fixed' }}
+        style={{ position: 'fixed', pointerEvents: 'none' }}
         id="particle-effect"
         options={{
           interactivity: {
@@ -78,19 +78,19 @@ const Home = () => {
               },
             },
             opacity: {
-              value: 0.48927153781200905,
+              value: 0.3,
               random: {
                 enable: false,
               },
               animation: {
                 enable: true,
-                speed: 0.2,
+                speed: 0.15,
                 minimumValue: 0,
                 sync: false,
               },
             },
             size: {
-              value: 2,
+              value: 1.5,
               random: { enable: true },
               anim: {
                 enable: true,
@@ -108,7 +108,7 @@ const Home = () => {
             },
             move: {
               enable: true,
-              speed: 0.2,
+              speed: 0.15,
               direction: 'none',
               random: true,
               straight: false,
