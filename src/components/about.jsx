@@ -1,7 +1,7 @@
 import React from 'react';
-import profilePic from '../images/profile.jpg';
 import WordsSection from '../components/wordsSection';
-import { Box, Flex, Link, Text, Image } from './styled';
+import Image from '../components/Image';
+import { Box, Flex, Link, Text } from './styled';
 
 const About = () => {
   const words = (
@@ -11,7 +11,6 @@ const About = () => {
         Northeastern University
       </Link>
       {`. I love plants, anime, and making coffee!`}
-      <Box marginBottom={4} />
     </>
   );
 
@@ -32,17 +31,11 @@ const About = () => {
         </Flex>
         <Box marginRight={4} />
         <Flex width="50%" justifyContent="center">
-          <Image
-            maxHeight="200px"
-            border="1px solid white"
-            borderRadius="50%"
-            src={profilePic}
-            alt-text="my profile picture"
-          />
+          <Image />
         </Flex>
       </Flex>
       <Box width="80%">
-        <WordsSection title="About" words={words} />
+        <WordsSection title="about" words={words} />
       </Box>
     </Box>
   );

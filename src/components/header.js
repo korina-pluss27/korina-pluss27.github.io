@@ -35,15 +35,15 @@ const Header = ({ show }) => {
       </Flex>
       <Flex alignItems="center" width="60%" justifyContent="space-between">
         <HeaderLink fontSize={[1, 1, 2]} href="#about">
-          [1] about
+          about
         </HeaderLink>
         <Box marginRight={3} />
         <HeaderLink fontSize={[1, 1, 2]} href="#projects">
-          [2] projects
+          projects
         </HeaderLink>
         <Box marginRight={3} />
         <HeaderLink fontSize={[1, 1, 2]} href="#contact">
-          [3] contact
+          contact
         </HeaderLink>
         <Box marginRight={3} />
       </Flex>

@@ -26,7 +26,7 @@ const Contact = () => {
     <>
       <SocialBar />
       <Box width="80%">
-        <WordsSection title="Contact" words={words} />
+        <WordsSection title="contact" words={words} />
       </Box>
     </>
   );

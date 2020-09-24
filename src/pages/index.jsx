@@ -3,12 +3,14 @@ import Particles from 'react-tsparticles';
 import { ThemeProvider } from 'styled-components';
 
 import App from '../components/app';
+import SEO from '../components/seo';
 import theme from '../styles/theme';
 import '../styles/index.css';
 
 const Home = () => {
   return (
     <main id="kp-main">
+      <SEO title="Korina Pluss" />
       <Particles
         style={{ position: 'fixed', pointerEvents: 'none' }}
         id="particle-effect"

@@ -16,7 +16,7 @@ const Projects = () => {
     <>
       <Box width="80%">
         <WordsSection
-          title="Projects"
+          title="projects"
           words={
             <>
               🚧 Projects coming soon! 🚧 For now, download my{' '}
