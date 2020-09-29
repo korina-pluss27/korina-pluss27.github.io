@@ -41,7 +41,7 @@ const About = () => {
     <Box>
       <Flex marginBottom={4}>
         <Flex flexDirection="column" width="50%" justifyContent="center">
-          <Text fontSize={[2, 2, 4]}>Korina Pluss</Text>
+          <Text fontSize={[3, 3, 5]}>Korina Pluss</Text>
           <Box marginBottom={2} />
           <Text
             fontSize={[1, 1, 2]}
