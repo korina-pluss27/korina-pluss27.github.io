@@ -1,9 +1,9 @@
 import React from 'react';
 
-const GitHub = () => {
+const GitHub = ({ link }) => {
   return (
     <a
-      href="https://github.com/korina-pluss27"
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="GitHub"
